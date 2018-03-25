@@ -1,0 +1,14 @@
+<h1>{{recipe.recipe_name}}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+<form action="{% url 'weekplanner:edit' recipe.id %}" method="post">
+  {% csrf_token %}
+  <label for="name">Recipe name:</label>
+  <input type="text" name="name" id="name" value="{{recipe.recipe_name}}"/>
+  <label for="url">URL:</label>
+  <input type="text" name="url" id="url" value="{{recipe.recipe_url}}"/>
+
+  <input type="submit" value="edit"/>
+</form>
