@@ -1,0 +1,13 @@
+<h1>Welcome to Meal Planner. Please log in.</h1>
+
+<form action="{% url 'authentication:login' %}" method="post">
+  {% csrf_token %}
+  <label for="username">Email:</label>
+  <input type="text" name="username" id="username" />
+  <label for="password">Password:</label>
+  <input type="password" name="password" id="password" />
+
+  <input type="submit" value="login"/>
+</form>
+
+<a href="{% url 'authentication:register' %}">Register</a>

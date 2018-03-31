@@ -19,4 +19,5 @@ from django.urls import include,path
 urlpatterns = [
     path('weekplanner/', include('weekplanner.urls')),
     path('admin/', admin.site.urls),
+    path('', include('authentication.urls')),
 ]

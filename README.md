@@ -9,6 +9,7 @@ In order to get a local web server running, simply navigate to the root folder a
 
 Django commands must be prefixed with `sudo docker-compose run web` to run inside the container.
 
+* `sudo docker-compose run web python manage.py startapp <app name>` will create a new Django app.
 * `sudo docker-compose run web python manage.py makemigrations <app>` will create migrations for a new Django app.
 * `sudo docker-compose run web python manage.py migrate` will apply these migrations.
 

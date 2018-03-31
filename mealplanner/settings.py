@@ -82,6 +82,7 @@ LOGGING = {
 
 INSTALLED_APPS = [
     'weekplanner.apps.WeekplannerConfig',
+    'authentication.apps.AuthenticationConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

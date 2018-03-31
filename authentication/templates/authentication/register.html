@@ -1,0 +1,17 @@
+<h1>Enter your details to use this dope webservice</h1>
+
+{% if error %}
+  <p>{{ error }}</p>
+{% endif %}
+
+<form action="{% url 'authentication:register' %}" method="post">
+  {% csrf_token %}
+  <label for="username">Email:</label>
+  <input type="text" name="username" id="username" />
+  <label for="password">Password:</label>
+  <input type="password" name="password" id="password" />
+  <label for="confirm">Confirm password:</label>
+  <input type="password" name="confirm" id="confirm" />
+
+  <input type="submit" value="register"/>
+</form>
