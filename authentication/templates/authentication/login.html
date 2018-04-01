@@ -1,6 +1,6 @@
 <h1>Welcome to Meal Planner. Please log in.</h1>
 
-<form action="{% url 'authentication:login' %}" method="post">
+<form action="{% url 'authentication:logIntoSite' %}" method="post">
   {% csrf_token %}
   <label for="username">Email:</label>
   <input type="text" name="username" id="username" />
